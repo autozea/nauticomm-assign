@@ -1,0 +1,54 @@
+<main class="page-container">
+  <div class="cover-title">
+    <img alt="eva-logo" class="logo" src="../assets/images/eva-logo.png" />
+    <span class="title">Now you can go around the world!</span>
+  </div>
+  <div class="content-container">
+    <mat-card class="left-side">
+      <div class="left-side-content">
+        <div class="search-container">
+          <label>Enter address</label>
+          <input
+            type="text"
+            class="place-input"
+            (keydown.enter)="$event.preventDefault()"
+            placeholder="Where do you want to go now?"
+            #search
+          />
+        </div>
+        <agm-map
+          [latitude]="latitude"
+          [longitude]="longitude"
+          [zoom]="zoom"
+          [disableDefaultUI]="false"
+          (mapClick)="mapClicked($event)"
+        >
+          <agm-direction [origin]="origin" [destination]="destination">
+          </agm-direction>
+        </agm-map>
+      </div>
+    </mat-card>
+
+    <mat-card class="right-side">
+      <div>
+        <span>Current address: <br />{{ address }} <br /></span>
+
+        <span *ngIf="changeAddress !== ''"
+          >new address {{ changeAddress }}</span
+        >
+      </div>
+      <img src="../assets/images/000004.jpg" alt="Hi, I'm Platoo" />
+    </mat-card>
+  </div>
+
+  <!-- <footer class="fixed inset-x-0 bottom-5 bg-gray-800"> -->
+  <footer class="footer-page">
+    <div class="footer-container">
+      Create by:
+      <a href="https://autozea.github.io/profile" target="_blank"
+        ><span class="text-lg"> AutoZea </span>
+        <mat-icon> ads_click </mat-icon></a
+      >
+    </div>
+  </footer>
+</main>

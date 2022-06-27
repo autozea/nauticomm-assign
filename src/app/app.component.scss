@@ -1,0 +1,51 @@
+.content-container {
+  @apply flex flex-row mx-5 mb-5;
+}
+
+.logo {
+  @apply w-20 h-20 self-center ml-5;
+}
+
+.cover-title {
+  @apply flex h-36 w-full bg-slate-800;
+}
+
+.title {
+  @apply self-center text-5xl text-white px-5;
+}
+
+.footer-page {
+  @apply flex bg-slate-300;
+}
+
+.search-container {
+  @apply p-3 mb-3;
+}
+
+.left-side {
+  @apply flex basis-3/5 mr-3;
+}
+
+.left-side-content {
+  @apply h-full w-full;
+}
+
+.right-side {
+  @apply flex flex-col basis-2/5;
+}
+.place-input {
+  @apply ml-4 p-2 border-solid border-2 rounded-md border-gray-300 w-3/4;
+}
+
+.footer-page {
+  @apply flex justify-center relative w-full bottom-5 bg-gray-800;
+}
+
+.footer-container {
+  @apply text-white text-center p-4;
+}
+
+agm-map {
+  height: 85%;
+  width: 100%;
+}
