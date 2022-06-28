@@ -20,7 +20,7 @@ import { AgmDirectionModule } from 'agm-direction';
     BrowserAnimationsModule,
     MatButtonModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAEcblsEgtaqEk_TV4c2sG-uO3i3KHRXzM',
+      apiKey: '',
       libraries: ['places', 'geometry'],
     }),
     AgmDirectionModule,

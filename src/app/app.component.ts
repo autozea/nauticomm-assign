@@ -47,11 +47,17 @@ export class AppComponent implements OnInit {
           this.zoom = 10;
           let changeAddress = place.formatted_address;
           console.log('Change address: ', changeAddress);
+          this.getChangeAddress(place.formatted_address!);
         });
         this.getDestination();
       });
     });
   }
+
+  getChangeAddress(changeAddress: string) {
+    this.changeAddress = changeAddress;
+  }
+
   private setCurrentLocation() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
