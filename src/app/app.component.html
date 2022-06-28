@@ -23,7 +23,13 @@
           [disableDefaultUI]="false"
           (mapClick)="mapClicked($event)"
         >
-          <agm-direction [origin]="origin" [destination]="destination">
+          <agm-direction
+            [origin]="origin"
+            [destination]="destination"
+            [renderOptions]="renderOptions"
+            [markerOptions]="markerOptions"
+            [waypoints]="waypoints"
+          >
           </agm-direction>
         </agm-map>
       </div>
@@ -33,9 +39,7 @@
       <div>
         <span>Current address: <br />{{ address }} <br /></span>
 
-        <span *ngIf="changeAddress !== ''"
-          >To: {{ changeAddress }}</span
-        >
+        <span *ngIf="changeAddress !== ''">To: {{ changeAddress }}</span>
       </div>
       <img src="../assets/images/000004.jpg" alt="Hi, I'm Platoo" />
     </mat-card>

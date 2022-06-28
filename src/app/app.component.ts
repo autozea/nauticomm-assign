@@ -91,6 +91,25 @@ export class AppComponent implements OnInit {
     );
   }
 
+  public waypoints: any = [];
+  public renderOptions = {
+    suppressMarkers: true,
+    draggable: true,
+  };
+  public markerOptions = {
+    origin: {
+      draggable: true,
+      icon: '../assets/images/platoo-icon.png',
+    },
+    destination: {
+      draggable: true,
+    },
+  };
+
+  public change($event: any) {
+    this.waypoints = $event.request.waypoints;
+  }
+
   getDirection() {
     this.origin = { lat: this.latitude, lng: this.longitude };
     this.destination = { lat: 13.746345642630601, lng: 100.56279136117175 };
